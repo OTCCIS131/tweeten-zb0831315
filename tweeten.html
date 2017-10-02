@@ -1,48 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Tweeten page</title>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
-  <body>
-      <h1>
-        <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Tweeten</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Notifications</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="#">Messages</a>
-                    </li>
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
+<!Doctype html>
+<html>
+    <head>
+        <title>Tweeten</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="navigation">
+            <nav class="navbar navbar-default navbar fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Tweeten</a>
+                    <ul class="nav nav-tabs">
+                        <li style="padding:5px">
+                            <button class="btn btn-default btn-md">
+                                <span class="glyphicon glyphicon-home"></span> Home
+                            </button>
+                        </li>
+                        <li style="padding:5px">
+                            <button class="btn btn-default btn-md">
+                                <span class="glyphicon glyphicon-bell"></span> Notifications
+                            </button>
+                        </li>
+                        <li style="padding:5px">
+                            <button class="btn btn-default btn-md">
+                                <span class="glyphicon glyphicon-envelope"></span> Message
+                            </button>
+                        </li>
+                        <form class="navbar-form navbar-right" style="padding:5px">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <button type="button" class="btn btn-default btn-md">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                                <button class="btn btn-tweet btn-primary btn-md pull-right" type="submit" style="padding:5px">
+                                    Tweet
+                                </button>
+                                <img class="img-circle pull-right" src="https://pbs.twimg.com/profile_images/610799600497229824/3j5eBnoP_400x400.jpg" alt="profile pic" style="width:40px;height:40px; padding:5px">                                
+                            </div>    
+                        </form>
+                    </ul>
                 </div>
-              </nav>
-            </h1>
+            </nav>
         </div>
         <div class="container">
-            <button type="button" class="btn btn-secondary btn-lg">Compose New Tweet</button>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img class="img-circle" src="https://pbs.twimg.com/profile_images/610799600497229824/3j5eBnoP_400x400.jpg" alt="profile pic" style="width:243px;height:243px;">
+                        <h2>Zachary Black</h2>
+                        <p>@ZacBlack24</p>
+                        <h3>91B in the United States Army Reserve attending OTC.</h3>
+                        <span class="glyphicon glyphicon-map-marker"></span> Springfield, MO<br>
+                        <span class="glyphicon glyphicon-calendar"></span> joined November 2011<br>
+                        <span class="glyphicon glyphicon-picture"></span> 133 Photos and Videos
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="panel-heading">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Compose new Tweet
+                                </div>
+                                <div class="panel-body">
+                                    <div class="text-box-comment">
+                                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                                    </div>
+                                    <div class="text-box-glyphs">
+                                        <button class="btn btn-info">
+                                            <span class="glyphicon glyphicon-picture"></span>
+                                        </button>
+                                        <button class="btn btn-info">
+                                            <span class="glyphicon glyphicon-map-marker"></span>
+                                        </button>
+                                        <button class="btn btn-primary pull-right" type="submit">
+                                            Tweet
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Tweets &#8226; Tweets & Replies &#8226; Media
+                                </div>
+                                <div class="panel-body">
+                                    <img class="img-circle pull-left" src="https://pbs.twimg.com/profile_images/610799600497229824/3j5eBnoP_400x400.jpg" alt="profile pic" style="width:75px;height:75px;">
+                                    <h4 style="float:left; line-height:7px">Zachary Black</h4><p style=" color:lightGray; float:left; margin-left:4px">@ZacBlack24 &#8226; Oct 1 &#8226;</p>
+                                    <p style="float:left">Here are some words.</p>
+                                    <div class="pull-left">
+                                        <span class="glyphicon glyphicon-comment"></span>5
+                                        <div class="retweet"><button type="button"  class="glyphicon glyphicon-retweet"></button>10</div>
+                                        <div class="likes"><button type="button" class="glyphicon glyphicon-heart"></button>8</div>
+                                        <span class="glyphicon glyphicon-envelope"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Your Tweet Activity
+                            </div>
+                            <div class="panel-body">
+                                <div class="text-box-comment">
+                                    You've tweeted once recently.
+                                    <!-- <textarea class="form-control" rows="5" id="comment"></textarea> -->
+                               </div>
+                                <div class="text-box-glyphs">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Who to Follow
+                            </div>
+                            <div class="list-group">
+                                <li class="list-group-item" style="height:100px">
+                                    <img class="img-circle pull-left" src="https://pbs.twimg.com/profile_images/825045721573314561/efRvTGlf_400x400.jpg" alt="summit1g" style="width:75px;height:75px;"> 
+                                    <p>@summit1g</p><br>
+                                    <button class="btn btn-primary pull-left" style="margin-top:-12px" type="submit">
+                                            Follow
+                                    </button>                                 
+                                </li>
+                                <li class="list-group-item" style="height:100px">
+                                    <img class="img-circle pull-left" src="https://pbs.twimg.com/profile_images/900982367237660672/GWBQfUjX_400x400.jpg" alt="Sodapoppin" style="width:75px;height:75px;"> 
+                                    <p>@Sodapoppintv</p><br>
+                                    <button class="btn btn-primary pull-left" style="margin-top:-12px" type="submit">
+                                        Follow
+                                    </button>  
+                                </li>
+                                <li class="list-group-item" style="height:100px">
+                                    <img class="img-circle pull-left" src="https://pbs.twimg.com/profile_images/898698184796512257/SBhaJChS_400x400.jpg" alt="Lirik" style="width:75px;height:75px;"> 
+                                    <p>@LIRIK</p><br>
+                                    <button class="btn btn-primary pull-left" style="margin-top:-12px" type="submit">
+                                        Follow
+                                    </button>
+                                </li>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
         </div>
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src=”js/bootstrap.js”></script>
-  </body>
+        <script src="./index.js"></script>
+    </body>
+</html>
