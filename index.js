@@ -9,7 +9,7 @@
 // })
 
 $(function(){
-    $('.likes').click(event => {
+    $('.glyphicon').click(event => {
         let currentCount = $(event.target).next().text()
         let newCount = parseInt(currentCount) + 1
  
