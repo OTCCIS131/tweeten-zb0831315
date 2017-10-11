@@ -1,5 +1,5 @@
-// $(function(){
-//     $('likes').click(function(event){
-//         $(this).increment()
-//     })
-// })
+$(function(){
+    $('likes').click(function(event){
+        $(this).increment()
+    })
+})
