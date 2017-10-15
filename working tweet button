@@ -1,0 +1,10 @@
+Create a form w/ ID
+Add "Submit" listener on form
+e.preventDefault()
+    1. select Div
+    2. Clone
+    3. Change
+    4. Insert
+    OR
+    1. Programmatically recreate
+    2. Insert
