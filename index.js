@@ -15,4 +15,23 @@ $(function(){
  
         $(event.target).next().text(newCount)
     })
+
+    $("#newTweet").submit(function (e){
+        e.preventDefault()
+        let newTweetInput = $('.text-box-comment', $(this))
+        let newTweet = newTweetInput.val()
+
+    let newTweetElement = $('.panel-body', $('.panel-default')).clone()
+
+    newTweetElement.text(newTweet)
+
+    let newTweetElement = $('<div class="panel-body">' + newTweet +'</div>')
+
+    newTweetElement.addClass('panel-body')
+
+    newTweetElement.text(newTweet)
+
+    $("#newTweet").append(newTweetElement)
+    newTweetInput.val('')
+    })
 })
